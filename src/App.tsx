@@ -6,6 +6,8 @@ import AboutPage from "./pages/AboutPage";
 import WelcomeScreen from "./components/ui/WelcomeScreen";
 import ProjectsPage from "./pages/ProjectsPage";
 import './App.css'
+import NotFoundPage from "./pages/NotFoundPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   const [welcomeDone, setWelcomeDone] = useState(() => {
@@ -35,6 +37,8 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
             {/* Add other routes here */}
           </Routes>
         </>

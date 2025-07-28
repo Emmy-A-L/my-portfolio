@@ -1,7 +1,8 @@
 // import { useNavigate } from "react-router-dom";
 import Card from "../components/ui/Card";
-import { FaCode, FaPaintBrush, FaServer } from "react-icons/fa";
-import { MdTravelExplore } from "react-icons/md";
+import { FaNewspaper } from "react-icons/fa";
+import { MdDashboard, MdOutlineLiveTv, MdTravelExplore } from "react-icons/md";
+import { FaLocationCrosshairs } from "react-icons/fa6";
 
 const ProjectsPage = () => {
   // const navigate = useNavigate()
@@ -10,7 +11,7 @@ const ProjectsPage = () => {
       <Card
         title="Certain News"
         description="Full-stack news aggregation platform leveraging RSS parsing technology to curate real-time content from diverse news sources, delivering a seamless information discovery experience."
-        icon={FaCode}
+        icon={FaNewspaper}
         onClick={() =>
           window.open("https://appcertain-news.vercel.app", "_blank")
         }
@@ -23,7 +24,7 @@ const ProjectsPage = () => {
       <Card
         title="Faith Streams"
         description="Modern streaming platform integrating Firebase and YouTube API for live service broadcasts. Engineered an intuitive frontend that enhances spiritual connectivity through technology."
-        icon={FaPaintBrush}
+        icon={MdOutlineLiveTv}
         onClick={() =>
           window.open("https://faith-stream-ruddy.vercel.app", "_blank")
         }
@@ -36,7 +37,7 @@ const ProjectsPage = () => {
       <Card
         title="FT-Service Location"
         description="Location-based service application featuring an elegantly crafted UI/UX design. Optimized user journeys through intuitive navigation and responsive interactions."
-        icon={FaServer}
+        icon={FaLocationCrosshairs}
         onClick={() =>
           window.open(
             "https://ft-service-and-loading-bays.vercel.app/",
@@ -65,7 +66,7 @@ const ProjectsPage = () => {
       <Card
         title="Mini Time Tracking Dashboard"
         description="Modern time tracking dashboard built with React and Firebase. Features real-time collaboration, task management, and insightful analytics."
-        icon={FaPaintBrush}
+        icon={MdDashboard}
         onClick={() =>
           window.open(
             "https://time-tracking-dashboard-user.vercel.app",
