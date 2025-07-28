@@ -10,7 +10,7 @@ const NameLogo = () => {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <motion.div
-          className="w-32 h-32 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl relative z-10"
+          className="w-32 h-32 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl relative z-10 pacifico"
           animate={{
             boxShadow: [
               "0 0 20px rgba(59, 130, 246, 0.5)",

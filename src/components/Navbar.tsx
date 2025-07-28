@@ -7,24 +7,25 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("about");
+  // const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
 
   const navItems = [
-    { name: "About", href: "/", id: "about" },
+    { name: "Home", href: "/", id: "home" },
+    { name: "About", href: "/about", id: "about" },
     { name: "Projects", href: "/projects", id: "projects" },
     { name: "Skills", href: "/skills", id: "skills" },
     { name: "Contact", href: "/contact", id: "contact" },
   ];
 
   // Check if user has scrolled
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 20);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -152,11 +153,8 @@ const Navbar = () => {
         variants={navbarVariants}
         initial="initial"
         animate="animate"
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out ${
-          scrolled 
-            ? "mt-4 w-[95%] max-w-6xl rounded-2xl bg-black/20 backdrop-blur-xl border border-white/10 shadow-2xl" 
-            : "mt-0 w-full bg-transparent backdrop-blur-sm"
-        }`}
+        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out mt-4 w-[95%] max-w-6xl rounded-2xl bg-black/20 backdrop-blur-xl border border-white/10 shadow-2xl`
+            }
       >
         <div className="relative px-6 py-4">
           {/* Animated Background Gradient */}
@@ -183,7 +181,7 @@ const Navbar = () => {
             >
               <a 
                 href="/" 
-                className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent relative z-10"
+                className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent relative z-10 pacifico"
               >
                 EL
               </a>

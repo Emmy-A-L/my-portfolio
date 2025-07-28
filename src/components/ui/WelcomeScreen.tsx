@@ -32,7 +32,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
       onAnimationComplete={() => {
         if (fadeOut) onFinish();
       }}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-blue-700 via-purple-700 to-gray-900 text-white"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-blue-700 via-purple-700 to-gray-900 text-white p-4 md:p-8 lg:p-14"
     >
       <NameLogo />
       <h1 className="text-2xl md:text-3xl font-bold font-heading text-center max-w-xl">

@@ -3,10 +3,12 @@ import type { Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import NameLogo from "../components/ui/NameLogo";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -49,7 +51,7 @@ const HomePage = () => {
   const skills = ["React", "TypeScript", "Node.js", "Next.js", "GraphQL", "AWS", "Python", "Django", "MongoDB", "Git"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden pt-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Orbs */}
@@ -171,7 +173,7 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              Creative Full-Stack Developer
+              Creative Software Developer
             </motion.span>
           </motion.div>
 
@@ -180,7 +182,7 @@ const HomePage = () => {
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >
-            Passionate about building beautiful, performant, and accessible web experiences 
+            Passionate about building beautiful, efficient, and accessible web experiences 
             that push the boundaries of what's possible on the web.
           </motion.p>
 
@@ -219,6 +221,7 @@ const HomePage = () => {
                 boxShadow: "0 10px 30px rgba(59, 130, 246, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={()=>{navigate("/projects")}}
             >
               View My Work
             </motion.button>
@@ -230,7 +233,7 @@ const HomePage = () => {
                 borderColor: "rgba(255, 255, 255, 0.6)"
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={()=>{}}
+              onClick={()=>{navigate("/contacts")}}
             >
               Let's Connect
             </motion.button>
@@ -238,7 +241,7 @@ const HomePage = () => {
 
           {/* Social Links */}
           <motion.div
-            className="flex justify-center gap-6 mt-12"
+            className="flex justify-center gap-6 mt-12 mb-12"
             variants={itemVariants}
           >
             {[
@@ -267,7 +270,7 @@ const HomePage = () => {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5 }}
