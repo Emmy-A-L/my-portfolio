@@ -233,7 +233,7 @@ const HomePage = () => {
                 borderColor: "rgba(255, 255, 255, 0.6)"
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={()=>{navigate("/contacts")}}
+              onClick={()=>{navigate("/contact")}}
             >
               Let's Connect
             </motion.button>
