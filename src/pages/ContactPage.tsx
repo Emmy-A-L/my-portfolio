@@ -2,10 +2,11 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { FaPaperPlane, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const SERVICE_ID = "your_service_id";
-const TEMPLATE_ID = "your_template_id";
-const USER_ID = "your_public_key";
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const USER_ID = import.meta.env.VITE_USER_ID;
 
 const ContactPage: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -42,7 +43,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -67,27 +68,27 @@ const ContactPage: React.FC = () => {
               Contact Information
             </h2>
             <div className="space-y-4">
-              <a
-                href="mailto:emmanuellot.dev@gmail.com"
+              <Link
+                to="mailto:emmanuellot95@gmail.com"
                 className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <FaEnvelope className="text-xl" />
-                <span>emmanuellot.dev@gmail.com</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/yourusername"
+                <span>emmanuellot95@gmail.com</span>
+              </Link>
+              <Link
+                to="https://linkedin.com/in/lot-emmanuel-abiodun"
                 className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <FaLinkedin className="text-xl" />
                 <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/yourusername"
+              </Link>
+              <Link
+                to="https://github.com/Emmy-A-L"
                 className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
                 <FaGithub className="text-xl" />
                 <span>GitHub</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -99,7 +100,7 @@ const ContactPage: React.FC = () => {
               <div>
                 <input
                   type="text"
-                  name="user_name"
+                  name="name"
                   placeholder="Your Name"
                   required
                   className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 outline-none transition-all text-gray-900 dark:text-white"
@@ -136,7 +137,7 @@ const ContactPage: React.FC = () => {
                   className={`${status === "sending" ? "animate-bounce" : ""}`}
                 />
                 <span>
-                  {status === "sending" ? "Sending..." : "Send Message"}
+                  {(status === "sending" ? "Sending..." : "Send Message" )}
                 </span>
               </motion.button>
               {status === "success" && (
