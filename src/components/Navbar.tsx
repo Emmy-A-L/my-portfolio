@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 // Note: Replace with your router Link component
 import { motion, AnimatePresence, type Variants } from "framer-motion";
@@ -39,35 +38,35 @@ const Navbar = () => {
 
   const navbarVariants: Variants = {
     initial: { y: -100, opacity: 0 },
-    animate: { 
-      y: 0, 
+    animate: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         stiffness: 100,
         damping: 20,
-        delay: 0.2
-      }
-    }
+        delay: 0.2,
+      },
+    },
   };
 
   const logoVariants: Variants = {
     initial: { scale: 0, rotate: -180 },
-    animate: { 
-      scale: 1, 
+    animate: {
+      scale: 1,
       rotate: 0,
       transition: {
         type: "spring",
         stiffness: 200,
         damping: 15,
-        delay: 0.5
-      }
+        delay: 0.5,
+      },
     },
     hover: {
       scale: 1.1,
       rotate: 360,
-      transition: { duration: 0.6, ease: "easeInOut" }
-    }
+      transition: { duration: 0.6, ease: "easeInOut" },
+    },
   };
 
   const linkVariants: Variants = {
@@ -78,13 +77,13 @@ const Navbar = () => {
       transition: {
         delay: 0.7 + index * 0.1,
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     }),
     hover: {
       y: -2,
-      transition: { duration: 0.2 }
-    }
+      transition: { duration: 0.2 },
+    },
   };
 
   const mobileMenuVariants: Variants = {
@@ -94,8 +93,8 @@ const Navbar = () => {
       y: -20,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
     open: {
       opacity: 1,
@@ -105,25 +104,25 @@ const Navbar = () => {
         duration: 0.3,
         ease: "easeOut",
         staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const mobileItemVariants: Variants = {
     closed: { x: -50, opacity: 0 },
-    open: { 
-      x: 0, 
+    open: {
+      x: 0,
       opacity: 1,
-      transition: { duration: 0.3, ease: "easeOut" }
-    }
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
   };
 
   interface Hamburger {
-    isOpen: boolean
+    isOpen: boolean;
   }
 
-  const HamburgerIcon = ({isOpen}: Hamburger) => (
+  const HamburgerIcon = ({ isOpen }: Hamburger) => (
     <motion.div
       className="w-6 h-6 flex flex-col justify-center items-center cursor-pointer"
       whileTap={{ scale: 0.9 }}
@@ -152,8 +151,7 @@ const Navbar = () => {
         variants={navbarVariants}
         initial="initial"
         animate="animate"
-        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out mt-4 w-[95%] max-w-6xl rounded-2xl bg-black/20 backdrop-blur-xl border border-white/10 shadow-2xl`
-            }
+        className={`fixed top-0 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out mt-4 w-[95%] max-w-6xl rounded-2xl bg-black/20 backdrop-blur-xl border border-white/10 shadow-2xl`}
       >
         <div className="relative px-6 py-4">
           {/* Animated Background Gradient */}
@@ -163,8 +161,8 @@ const Navbar = () => {
               background: [
                 "linear-gradient(90deg, rgba(147,51,234,0.1) 0%, rgba(37,99,235,0.1) 50%, rgba(6,182,212,0.1) 100%)",
                 "linear-gradient(90deg, rgba(6,182,212,0.1) 0%, rgba(147,51,234,0.1) 50%, rgba(37,99,235,0.1) 100%)",
-                "linear-gradient(90deg, rgba(37,99,235,0.1) 0%, rgba(6,182,212,0.1) 50%, rgba(147,51,234,0.1) 100%)"
-              ]
+                "linear-gradient(90deg, rgba(37,99,235,0.1) 0%, rgba(6,182,212,0.1) 50%, rgba(147,51,234,0.1) 100%)",
+              ],
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           />
@@ -178,8 +176,8 @@ const Navbar = () => {
               whileHover="hover"
               className="relative"
             >
-              <a 
-                href="/" 
+              <a
+                href="/"
                 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent relative z-10 pacifico"
               >
                 EL
@@ -188,9 +186,13 @@ const Navbar = () => {
                 className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-500/20 to-purple-600/20 rounded-lg blur-lg"
                 animate={{
                   scale: [1, 1.2, 1],
-                  opacity: [0.5, 0.8, 0.5]
+                  opacity: [0.5, 0.8, 0.5],
                 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
             </motion.div>
 
@@ -220,7 +222,11 @@ const Navbar = () => {
                       <motion.div
                         layoutId="activeTab"
                         className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
                       />
                     )}
                   </Link>
@@ -236,11 +242,18 @@ const Navbar = () => {
                 className="ml-4"
               >
                 <motion.button
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
-                    boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)"
+                    boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)",
                   }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    const fileUrl =
+                      "/files/Emmanuel Lot_Junior Software Developer.pdf";
+
+                    // Open the file in a new browser tab/window
+                    window.open(fileUrl, "_blank");
+                  }}
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <FaDownload className="text-sm" />
@@ -292,10 +305,7 @@ const Navbar = () => {
                 {/* Mobile Navigation Links */}
                 <div className="space-y-1 mb-6">
                   {navItems.map((item) => (
-                    <motion.div
-                      key={item.id}
-                      variants={mobileItemVariants}
-                    >
+                    <motion.div key={item.id} variants={mobileItemVariants}>
                       <a
                         href={item.href}
                         onClick={() => {
@@ -319,6 +329,13 @@ const Navbar = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    onClick={() => {
+                      const fileUrl =
+                        "/files/Emmanuel Lot_Junior Software Developer.pdf";
+
+                      // Open the file in a new browser tab/window
+                      window.open(fileUrl, "_blank");
+                    }}
                     className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium shadow-lg"
                   >
                     <FaDownload className="text-sm" />
