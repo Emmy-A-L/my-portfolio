@@ -1,6 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 import Card from "../components/ui/Card";
-import { FaNewspaper } from "react-icons/fa";
+import { FaNewspaper, FaTruck } from "react-icons/fa";
 import { MdDashboard, MdOutlineLiveTv, MdTravelExplore } from "react-icons/md";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 
@@ -8,6 +8,19 @@ const ProjectsPage = () => {
   // const navigate = useNavigate()
   return (
     <section className="w-full max-w-5xl mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Card
+        title="Dream Trust Shipping"
+        description="Full-stack shipping web application designed to give users insights on the business' services, and provide payment and shipment tracking features for customers."
+        icon={FaTruck}
+        onClick={() =>
+          window.open("https://shipping-co-three.vercel.app", "_blank")
+        }
+        children={
+          <p className="text-gray-500 dark:text-gray-400 -mt-2">
+            Click to view project
+          </p>
+        }
+      />
       <Card
         title="Certain News"
         description="Full-stack news aggregation platform leveraging RSS parsing technology to curate real-time content from diverse news sources, delivering a seamless information discovery experience."
