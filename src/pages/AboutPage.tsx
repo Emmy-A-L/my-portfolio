@@ -114,7 +114,7 @@ const AboutPage = () => {
               </h2>
               <div className="font-serif">
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
-                  As a dedicated Full-Stack Developer with two years of hands-on
+                  As a dedicated Full-Stack Developer with one year of hands-on
                   experience, Emmanuel Lot has established himself as a
                   craftsman of robust and user-centric web applications. His
                   journey in software development stands as a testament to his
