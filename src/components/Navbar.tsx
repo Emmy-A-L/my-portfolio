@@ -249,7 +249,7 @@ const Navbar = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => {
                     const fileUrl =
-                      "/files/Emmanuel Lot_Junior Software Developer.pdf";
+                      "/files/Emmanuel Lot_SWE intern.pdf";
 
                     // Open the file in a new browser tab/window
                     window.open(fileUrl, "_blank");
@@ -331,7 +331,7 @@ const Navbar = () => {
                     whileTap={{ scale: 0.98 }}
                     onClick={() => {
                       const fileUrl =
-                        "/files/Emmanuel Lot_Junior Software Developer.pdf";
+                        "/files/Emmanuel Lot_SWE intern.pdf";
 
                       // Open the file in a new browser tab/window
                       window.open(fileUrl, "_blank");
