@@ -17,7 +17,7 @@ const ProjectsPage = () => {
         }
         children={
           <p className="text-gray-500 dark:text-gray-400 -mt-2">
-            Click to view project
+            Click to view repository
           </p>
         }
       />
