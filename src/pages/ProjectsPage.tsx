@@ -1,6 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 import Card from "../components/ui/Card";
-import { FaNewspaper, FaTruck } from "react-icons/fa";
+import { FaNewspaper, FaPython, FaTruck } from "react-icons/fa";
 import { MdDashboard, MdOutlineLiveTv, MdTravelExplore } from "react-icons/md";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 
@@ -8,6 +8,19 @@ const ProjectsPage = () => {
   // const navigate = useNavigate()
   return (
     <section className="w-full max-w-5xl mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Card
+        title="Restaurant Management System"
+        description="A comprehensive restaurant management system API designed to streamline operations for restaurants. This application provides tools for inventory management, order processing, sales tracking, and customer data management, helping restaurant owners optimize their business performance."
+        icon={FaPython}
+        onClick={() =>
+          window.open("https://github.com/Emmy-A-L/RMS-v-1.0.0.git", "_blank")
+        }
+        children={
+          <p className="text-gray-500 dark:text-gray-400 -mt-2">
+            Click to view project
+          </p>
+        }
+      />
       <Card
         title="Dream Trust Shipping"
         description="Full-stack shipping web application designed to give users insights on the business' services, and provide payment and shipment tracking features for customers."
