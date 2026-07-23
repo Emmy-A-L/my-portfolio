@@ -255,7 +255,7 @@ const HomePage = () => {
           transition={{ duration: 0.6 }}
         >
           {[
-            { metric: "1+", label: "Years Experience", detail: "Hands-on Development" },
+            { metric: "2+", label: "Years Experience", detail: "Hands-on Development" },
             { metric: "7+", label: "Featured Projects", detail: "Shipped & Deployed" },
             { metric: "10+", label: "Tech Stack Tools", detail: "Modern Web Ecosystem" },
             { metric: "100%", label: "Code Quality", detail: "Clean & Maintainable" }

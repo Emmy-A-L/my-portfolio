@@ -149,6 +149,10 @@ const AboutPage = () => {
             {/* Key Attributes Card */}
             <div className="p-5 rounded-2xl glass-card border border-white/10 space-y-3 text-sm">
               <div className="flex justify-between items-center pb-2 border-b border-white/10">
+                <span className="text-gray-400">Location</span>
+                <span className="text-gray-200 font-medium">Lagos, Nigeria</span>
+              </div>
+              <div className="flex justify-between items-center pb-2 border-b border-white/10">
                 <span className="text-gray-400">Timezone</span>
                 <span className="text-gray-200 font-medium">GMT+1</span>
               </div>
